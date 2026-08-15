@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circuit — AKTU Study Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <div class="rail" aria-hidden="true">
+    <div class="rail-fill" id="railFill"></div>
+  </div>
+
+  <header class="nav">
+    <div class="nav-brand"><span class="dot"></span> Circuit</div>
+    <nav class="nav-links">
+      <a href="#subjects">Subjects</a>
+      <a href="#chatbot">AI Help</a>
+      <a href="#about">About</a>
+    </nav>
+    <a href="login.html" class="btn btn-ghost">Log in</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">AKTU · 2nd Year · Semester 3</p>
+        <h1>Study like a<br><span class="accent">closed circuit.</span></h1>
+        <p class="hero-sub">A shared space for notes, problem sets, and an AI tutor —
+          built by students, for the batch. No passwords handed to anyone, no
+          content that isn't ours to share.</p>
+        <div class="hero-actions">
+          <a href="login.html" class="btn btn-primary">Get started</a>
+          <a href="#subjects" class="btn btn-ghost">Browse subjects</a>
+        </div>
+      </div>
+      <div class="hero-art reveal" id="heroCard">
+        <div class="pcb-card" id="tiltCard">
+          <div class="pcb-row"><span>SEM</span><b>03</b></div>
+          <div class="pcb-row"><span>BRANCH</span><b>ENGG</b></div>
+          <div class="pcb-row"><span>STATUS</span><b class="glow">ONLINE</b></div>
+          <svg class="pcb-lines" viewBox="0 0 240 160">
+            <path d="M10 20 H120 V60 H230" />
+            <path d="M10 80 H60 V140 H200" />
+            <circle cx="120" cy="20" r="3" />
+            <circle cx="230" cy="60" r="3" />
+            <circle cx="60" cy="80" r="3" />
+            <circle cx="200" cy="140" r="3" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="subjects">
+      <h2 class="reveal">Semester 3 subjects</h2>
+      <p class="section-sub reveal">Notes and reference links your batchmates have shared. Add your own from the
+        dashboard.</p>
+      <div class="grid" id="subjectGrid">
+        <!-- Populated as static examples; real data comes from the dashboard/API -->
+      </div>
+    </section>
+
+    <section class="section alt" id="chatbot">
+      <div class="chat-preview reveal">
+        <div class="chat-copy">
+          <p class="eyebrow">AI Help</p>
+          <h2>Ask it like you'd ask a senior.</h2>
+          <p class="section-sub">Stuck on a derivation at 1am? The chatbot in your dashboard
+            explains concepts step by step, tuned for the AKTU syllabus. It's a study aid,
+            not a substitute for actually working the problem yourself.</p>
+          <a href="login.html" class="btn btn-primary">Try the AI tutor</a>
+        </div>
+        <div class="chat-window">
+          <div class="chat-line them">Can you explain Thevenin's theorem simply?</div>
+          <div class="chat-line me">Sure — think of any two-terminal network as one voltage source with one series
+            resistance...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="reveal">Built the right way</h2>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <h3>Your own login</h3>
+          <p>Accounts live on this site only. We never ask for — or see — anyone's real Gmail password.</p>
+        </div>
+        <div class="about-card reveal">
+          <h3>Shareable content only</h3>
+          <p>Notes, write-ups, and links your batch actually has the right to share.</p>
+        </div>
+        <div class="about-card reveal">
+          <h3>An AI tutor on call</h3>
+          <p>Ask questions in plain language, get explanations tuned to your courses.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Circuit — a student-run study hub.</span>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

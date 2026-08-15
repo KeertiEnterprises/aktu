@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Circuit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="dash-body">
+
+  <header class="nav">
+    <div class="nav-brand"><span class="dot"></span> Circuit</div>
+    <nav class="nav-links">
+      <button class="tab-btn active" data-panel="resources">Resources</button>
+      <button class="tab-btn" data-panel="chat">AI Help</button>
+    </nav>
+    <div class="nav-user">
+      <span id="whoami" class="mono"></span>
+      <button id="logoutBtn" class="btn btn-ghost">Log out</button>
+    </div>
+  </header>
+
+  <main class="dash-main">
+
+    <section id="panel-resources" class="dash-panel">
+      <div class="panel-head">
+        <h2>Shared resources</h2>
+        <button id="addResourceBtn" class="btn btn-primary">+ Add resource</button>
+      </div>
+
+      <form id="addResourceForm" class="resource-form hidden">
+        <input name="title" placeholder="Title" required />
+        <input name="subject" placeholder="Subject (e.g. Data Structures)" required />
+        <input name="semester" placeholder="Semester (e.g. 3rd)" required />
+        <select name="type">
+          <option value="note">My note / write-up</option>
+          <option value="link">External link (NPTEL, YouTube, official material)</option>
+        </select>
+        <input name="url_or_path" placeholder="Link or file URL" required />
+        <textarea name="description" placeholder="Short description (optional)"></textarea>
+        <div class="form-row">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" id="cancelResourceBtn" class="btn btn-ghost">Cancel</button>
+        </div>
+      </form>
+
+      <div id="resourceList" class="resource-list"></div>
+    </section>
+
+    <section id="panel-chat" class="dash-panel hidden">
+      <h2>Ask the AI tutor</h2>
+      <p class="section-sub">Tuned for the AKTU syllabus. It explains — it doesn't do your assignment for you.</p>
+      <div id="chatLog" class="chat-log"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Ask about a topic..." autocomplete="off" required />
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

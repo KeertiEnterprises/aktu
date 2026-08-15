@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — Circuit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+
+  <a href="index.html" class="nav-brand auth-brand"><span class="dot"></span> Circuit</a>
+
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="tabs">
+        <button class="tab active" data-tab="login">Log in</button>
+        <button class="tab" data-tab="signup">Sign up</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <label>Username or email
+          <input type="text" name="username" required autocomplete="username" />
+        </label>
+        <label>Password
+          <input type="password" name="password" required autocomplete="current-password" />
+        </label>
+        <p class="form-error" id="loginError"></p>
+        <button type="submit" class="btn btn-primary btn-block">Log in</button>
+      </form>
+
+      <form id="signupForm" class="auth-form hidden">
+        <label>Username
+          <input type="text" name="username" required minlength="3" autocomplete="username" />
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" />
+        </label>
+        <label>Password
+          <input type="password" name="password" required minlength="8" autocomplete="new-password" />
+        </label>
+        <p class="form-hint">This password is only for Circuit — it's separate from your Gmail
+          password, and we never ask for that here.</p>
+        <p class="form-error" id="signupError"></p>
+        <button type="submit" class="btn btn-primary btn-block">Create account</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
